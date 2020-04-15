@@ -1,0 +1,23 @@
+{
+  "name": "covid-19-estimator-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trafiki/covid-19-estimator-api.git"
+  },
+  "author": "Akerele Babatunde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trafiki/covid-19-estimator-api/issues"
+  },
+  "homepage": "https://github.com/trafiki/covid-19-estimator-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
