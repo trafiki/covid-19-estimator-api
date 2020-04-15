@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 // HOME
-app.get('/', (req, res) => res.send('Welcome to the genre API'));
+app.get('/', (req, res) => res.send('Welcome to the Covid 19 estimator API'));
 
 // POST COVID19 DATA
 app.post('/api/v1/on-covid-19', (req, res) => {
