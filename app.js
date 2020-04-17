@@ -12,7 +12,7 @@ const covid19ImpactEstimator = require('./estimator');
 const app = express();
 
 // create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs.log'), { flags: 'a' })
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs.txt'), { flags: 'a' })
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -50,9 +50,9 @@ app.post('/api/v1/on-covid-19/xml', (req, res) => {
 });
 
 app.get('/api/v1/on-covid-19/logs', (req, res) => {
-  fs.readFile('./logs.log', 'utf8', (err, data) => {
+  fs.readFile('./logs.txt', 'utf8', (err, data) => {
     if(err) throw err;
-    res.set('Content-Type', 'text/plain')
+    res.set('Content-Type', 'text/plain');
     res.send(data);
   });
 });
